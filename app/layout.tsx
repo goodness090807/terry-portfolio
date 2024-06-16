@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/shared/Header";
-import Footer from "@/components/shared/Footer";
 
 export const metadata: Metadata = {
     title: "蔡家誠(Terry)",
@@ -24,11 +22,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="zh-Hant">
-            <body className={openhuninnFont.className}>
-                <Header />
-                {children}
-                <Footer />
-            </body>
+            <body className={openhuninnFont.className}>{children}</body>
         </html>
     );
 }
